@@ -1,21 +1,39 @@
-function verificartime(){
-    let numero=Number(document.getElementById("Times").value);
-    let notificaco= "";
-    switch (numero) {
+
+    function calcular() {
+    let compras = Number(document.getElementById("compras").value);
+    let Quantidade = Number(document.getElementById("quantidade").value);
+
+    let Nome = "";
+    let Preco = 0;
+    let total = 0;
+    let mensagem = "";
+
+    switch (compras) {
         case 1:
-            notificaco="Você esta torcendo para o Bayer de Munique!"
+            Nome = "Hamburguer";
+            Preco = 10;
             break;
-            case 2:
-                notificaco="Você esta torcendo para o Sporting!"
-                break;
-                case 3:
-                    notificaco="Você esta torcendo para o Arsenal!"
-                    break;
-                    case 4:
-              notificaco="Você esta torcendo para o atletico de Madri!"
-              break
+        case 2:
+            Nome = "Pizza";
+            Preco = 5;
+            break;
+        case 3:
+            Nome = "Coxinha";
+            Preco = 4;
+            break;
         default:
-            notificaco="Número Inválido, por favor selecione um numero de 1 a 4"
+            mensagem = "Produto inválido!";
     }
-    document.getElementById("Resposta").innerHTML=notificaco;
+
+    // ✔️ Fora do switch (IMPORTANTE)
+    if (mensagem === "") {
+        total = Preco * Quantidade;
+
+        mensagem = `Produto: ${Nome} <br>
+        Quantidade: ${Quantidade} <br>
+        Total: R$ ${total}`;
+    }
+
+    document.getElementById("resultado").innerHTML = mensagem;
 }
+
