@@ -11,7 +11,12 @@ function jogo() {
      let usuario=Number(valorBruto);
      let computer=Math.floor(Math.random() * 10) + 1;
      let campo=document.getElementById("resultado");
-     //4. condições para gnahar ou perder
+     //4.Verificação via console.log
+     console.log("Número escolhido pelo usuário: " + usuario);
+     console.log("Número gerado pelo computador: " + computer);
+     
+     
+     //5. condições para gnahar ou perder
      if (usuario === computer) {
         document.getElementById("resultado").innerHTML = "você ganhou!";
     } else {
