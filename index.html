@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jogo</title>
     <script src="index.js"></script>
 </head>
-
 <body>
-    <h1>Sistema de compra com Switch case </h1>
-    <h2>Menu</h2>
-    <ul>
-        <li>1-hamburguer</li> <br>
-        <li>2-Pizza</li> <br>
-        <li>3-Coxinha</li> <br>
-        codigo do produto
-        <input type="number" id="compras"> <br> <br>
+<h1>Jogo da adivinhação</h1> <!--parte onde o usuário escolhe um número-->
+ <h2>Por favor, selecione um número de 1 a 10</h2>
+<input type="number" id="game" max="10" min="1">
+<button onclick="jogo()">começar</button> <!--botão que da inicio ao jogo-->
+<h3 id="resultado"></h3>
 
-        Quantidade de produtos <br> <br>
-
-        <input type="number" id="quantidade"> <br>
-        <button onclick="calcular()">aperte</button>
-        <h3 id="resultado"></h3>
 
 </body>
-
 </html>
