@@ -1,0 +1,11 @@
+.aprovado {
+    background-color: #d4edda; /* Um verde bem leve */
+    color: #155724;            /* Texto verde escuro */
+    border: 1px solid #c3e6cb;
+}
+
+.recuperacao {
+    background-color: #fff3cd; /* Um amarelo/laranja leve */
+    color: #856404;            /* Texto escuro */
+    border: 1px solid #ffeeba;
+}
