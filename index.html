@@ -1,76 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js" defer ></script>
-</head>
-<body>
-   <main>
-    <header>
-        <h1>Simulador de Notas-Novo ensino médio</h1> <!---cabeçalho do projeto-->
-    </header>
-    <!--Painel de trimestres-->
-    <form id="formulario-notas">
-        <!--Espaço para os formularios-->
-        <!--bloco primerio trimestre-->
-        <section class="card-trimestre">
-            <h2>1ºprimerio trimestre</h2>
-            <div class="campo-nota">
-                <label for="t1-nota1">Avaliação Principal:</label>
-                <input type="number" id="t1-nota1" min="0" max="10" step="0.1" required>
-            </div>
-            <div class="campo-nota">
-                <label for="t1-nota2">Projetos/Trabalhos:</label>
-                <input type="number" id="t1-nota2" min="0" max="10" step="0.1" required>
-            </div>
-            <div class="campo-nota">
-                <label for="t1-nota3">Atitudenal:</label>
-                <input type="number" id="t1-nota3" min="0" max="10" step="0.1" required>
-            </div>
-        </section>
-        <!--2ºtrimenstre-->
-        <section class="card-trimestre">
-            <h2>2ºtrimestre</h2>
-            <div class="campo-nota">
-                <label for="t2-nota1">Avaliação Principal:</label>
-                <input type="number" id="t2-nota1" min="0" max="10" step="0.1" required>
-            </div>
-            <div class="campo-nota">
-                <label for="t2-nota2">Projetos/Trabalho:</label>
-                <input type="number" id="t2-nota2" min="0" max="10" step="0.1" required>
-            </div>
-            <div class="campo-nota">
-                <label for="t2-nota3">Atitudenal:</label>
-                <input type="number" id="t2-nota3" min="0" max="10" step="0.1" required>
-            </div>
-        </section>
-       <!--bloco do terceiro trimestre-->
-        <section class="card-trimestre">
-            <h2>3ºtrimestre</h2>   
-                <div class="campo-nota">
-                <label for="t3-nota1">Avaliação Principal:</label>
-                <input type="number" id="t3-nota1" min="0" max="10" step="0.1" required>
-            </div>
-            <div class="campo-nota">
-                <label for="t3-nota2">Projetos/Trabalho:</label>
-                <input type="number" id="t3-nota2" min="0" max="10" step="0.1" required>
-            </div>
-            <div class="campo-nota">
-                <label for="t3-nota3">Atitudenal:</label>
-                <input type="number" id="t3-nota3" min="0" max="10" step="0.1" required>
-            </div>   
-        </section>
-        <!--Botão que inicia o calculo de tudo o que está no formulário-->
-        <button type="submit" id="btn-calcular">Verificar Situação Final</button>
+<html>
 
-    </form>
-    <!--Espaço para o javascript exibir o resultado final de aprovado ou reprovado-->
-    <section id="painel-resultado">
-        <!--onde sera colocado as ilustrações e mensagems-->
-    </section>
-   </main> 
+<head>
+
+    <style>
+        body {
+
+            font-family: Arial;
+            text-align: center;
+            background: #dbeafe;
+            padding: 30px;
+
+        }
+
+        main {
+
+            background: white;
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+        input,
+        button {
+
+            width: 90%;
+            padding: 10px;
+            margin: 5px;
+
+        }
+
+        button {
+
+            background: #2563eb;
+            color: white;
+            border: none;
+
+        }
+
+        /* MELHORIA:
+Trocar cores e tamanhos */
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Sistema de Notas</h1>
+        <input type="text" id="nome" placeholder="Nome do Aluno">
+        <input type="number" id="nota1" placeholder="Nota 1">
+
+        <input type="number" id="nota2" placeholder="Nota 2">
+        <input type="number" id="nota3" placeholder="Nota 3">
+        <input type="number" id="nota4" placeholder="Nota 4">
+
+
+        <button onclick="calcular()">
+
+            Calcular Média
+
+        </button>
+
+        <h2 id="resultado"></h2>
+
+    </main>
+
+    <script>
+
+        function calcular() {
+
+            let n1 =
+                Number(document.getElementById("nota1").value);
+
+            let n2 =
+                Number(document.getElementById("nota2").value);
+                 //adicionamos mais notas para a media semelhante a propria escola
+            let n3 =
+                Number(document.getElementById("nota3").value);
+            let n4 =
+                Number(document.getElementById("nota4").value);
+
+            let media = (n1 + n2 + n3 + n4) / 4;
+
+            if (media >= 6) {
+
+                document.getElementById("resultado").innerHTML =
+
+                    "Aprovado com média " + media.toFixed(1);
+
+            }
+            else if (media <= 5) {
+
+                document.getElementById("resultado").innerHTML =
+
+                    "Recuperação com média " + media.toFixed(1);
+
+            }
+
+            else {
+
+                document.getElementById("resultado").innerHTML =
+
+                    "Reprovado com média " + media.toFixed(1);
+
+            }
+
+            /* MELHORIAS:
+         
+            1. Mostrar média
+            2. Mostrar recuperação
+            3. Alterar cor do resultado
+            4. Inserir nome do aluno
+            5. Mostrar conceito A/B/C
+         
+            */
+
+        }
+
+    </script>
 
 </body>
+
 </html>
