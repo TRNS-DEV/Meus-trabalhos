@@ -3,126 +3,139 @@
 
 <head>
 
-    <style>
-        body {
+<style>
 
-            font-family: Arial;
-            text-align: center;
-            background: #dbeafe;
-            padding: 30px;
+body{
 
-        }
+   font-family:Arial;
+   text-align:center;
+   background:#dbeafe;
+   padding:30px;
 
-        main {
+}
 
-            background: white;
-            width: 300px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 10px;
+main{
 
-        }
+   background:white;
+   width:300px;
+   margin:auto;
+   padding:20px;
+   border-radius:10px;
 
-        input,
-        button {
+}
 
-            width: 90%;
-            padding: 10px;
-            margin: 5px;
+input, button{
 
-        }
+   width:90%;
+   padding:10px;
+   margin:5px;
 
-        button {
+}
 
-            background: #2563eb;
-            color: white;
-            border: none;
+button{
 
-        }
+   background:#2563eb;
+   color:white;
+   border:none;
 
-        /* MELHORIA:
+}
+
+/* MELHORIA:
 Trocar cores e tamanhos */
-    </style>
+
+</style>
 
 </head>
 
 <body>
 
-    <main>
+<main>
 
-        <h1>Sistema de Notas</h1>
-        <input type="text" id="nome" placeholder="Nome do Aluno">
-        <input type="number" id="nota1" placeholder="Nota 1">
+<h1>Sistema de Notas</h1>
+<input type="text"
+id="nome"
+placeholder="Insira seu nome">
 
-        <input type="number" id="nota2" placeholder="Nota 2">
-        <input type="number" id="nota3" placeholder="Nota 3">
-        <input type="number" id="nota4" placeholder="Nota 4">
+<input type="number" 
+id="nota1"
+placeholder="Nota1">
+
+<input type="number"
+id="nota2"
+placeholder="Nota2">
+
+<input type="number"
+id="nota3"
+placeholder="Nota3">
+
+<input type="number"
+id="nota4"
+placeholder="Nota 4">
 
 
-        <button onclick="calcular()">
+<button onclick="calcular()">
 
-            Calcular Média
+Calcular Média
 
-        </button>
+</button>
 
-        <h2 id="resultado"></h2>
+<h2 id="resultado"></h2>
 
-    </main>
+</main>
 
-    <script>
+<script>
 
-        function calcular() {
+function calcular(){
+    let nome=document.getElementById("nome").value;
 
-            let n1 =
-                Number(document.getElementById("nota1").value);
+    let n1 =
+   Number(document.getElementById("nota1").value);
 
-            let n2 =
-                Number(document.getElementById("nota2").value);
-                 //adicionamos mais notas para a media semelhante a propria escola
-            let n3 =
-                Number(document.getElementById("nota3").value);
-            let n4 =
-                Number(document.getElementById("nota4").value);
+   let n2 =
+   Number(document.getElementById("nota2").value);
 
-            let media = (n1 + n2 + n3 + n4) / 4;
+   let n3 =
+   Number(document.getElementById("nota3").value);
 
-            if (media >= 6) {
+   let n4=
+   Number(document.getElementById("nota4").value);
 
-                document.getElementById("resultado").innerHTML =
+   let media = (n1 + n2 + n3 + n4)/4;
 
-                    "Aprovado com média " + media.toFixed(1);
+   if(media >=9){
+      document.getElementById("resultado").innerHTML =
+`Desempenho de classificação A aprovado, Parabéns!`+" "+ media +" "+nome;
+   }
+   else if(media>=7){
+    document.getElementById("resultado").innerHTML=
+    `Desempenho de classificação B Aprovado`;+" "+ media +" "+nome;
+   }
+   else if(media>=5 && media<=6.9){
+    document.getElementById("resultado").innerHTML=
+    `Desempenho de Classificação C Recuperação, Ainda Dá para melhorar`+" "+ media +" "+nome;
+   }
+   else{
+    document.getElementById("resultado").innerHTML=
+    `Reprovado, Estude mais você consegue!`+ media + nome;
 
-            }
-            else if (media <= 5) {
+   } 
 
-                document.getElementById("resultado").innerHTML =
 
-                    "Recuperação com média " + media.toFixed(1);
+   }
 
-            }
+   /* MELHORIAS:
 
-            else {
+   1. Mostrar média
+   2. Mostrar recuperação
+   3. Alterar cor do resultado
+   4. Inserir nome do aluno
+   5. Mostrar conceito A/B/C
 
-                document.getElementById("resultado").innerHTML =
+   */
 
-                    "Reprovado com média " + media.toFixed(1);
 
-            }
 
-            /* MELHORIAS:
-         
-            1. Mostrar média
-            2. Mostrar recuperação
-            3. Alterar cor do resultado
-            4. Inserir nome do aluno
-            5. Mostrar conceito A/B/C
-         
-            */
-
-        }
-
-    </script>
+</script>
 
 </body>
-
 </html>
