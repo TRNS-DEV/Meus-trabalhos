@@ -3,64 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Galeria de Cartões</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!--cabeçalho da pagina-->
     <header class="cabecalho">
-    <div class="titulo">
+     <div class="container">
         <h2>Flex Cards</h2>
-    <p>Aprendendo flexbox na prática</p>
-    </div>
-  </header>  
-  <!--titulo da seção de galeria-->
-  <main class="sesao-galeria">
-    <div class="galeria">
-      <h2>Galeria de cards</h2>
-   <p class="descricao">Use o display flex para reorgarnizar os cards.Teste diferentes possibilidades</p> 
-    </div>
-    <section class="cards" aria-label="galeria de cards">
-<article class="card">
-        <img src="/imagens/desenvolvimento web.avif.jpg"alt="computador desenvolvendo para a web">
-        <div class="conteudo">
-            <h3>Desenvolvimento Web</h3>
-            <p>Criação de sites modernos e responsivos</p>
-        </div>
-    </article>
-    <article class="card">
-        <img src="/imagens/pc.avif.jpg"alt="computador com interface de design">
-        <div class="conteudo">
-            <h3>UI/UX Design</h3>
-            <p>interfaces bonitas e facies de utilizar</p>
-        </div>
-    </article>
-    <article class="card">
-        <img src="/imagens/programacao.jpeg"alt="computador com codigo ao fundo">
-        <div class="conteudo">
-            <h3>Programação</h3>
-            <p>Desenvolvimento de software e resolução de problemas</p>
-                </div>
-            </article>
-            <article class="card">
-                <img src="/imagens/camera.jpg"alt="camera fotografica">
-                <div class="conteudo">
-                    <h3>Fotografia</h3>
-                    <p>registro de momentos atraves da imagem</p>
-                </div>
-            </article>
-            <article class="card">
-                <img src="/imagens/marketing.jpg"alt="Sala de negocios">
-                <div class="conteudo">
-                    <h3>Marketing Digital</h3>
-                    <p>estratégias de marketing para o mundo digital</p>
-                </div>
-                </article>
+        <p>Aprendendo Flexbox na prática</p>
+     </div>   
+    </header>
+    <main class="sessao-galeria">
+        <div class="container">
+        <h2>Galeria de cards</h2>
+        </h2>
+        <p class="comando">
+            Use o display:flex para organizar os cards.Teste possibilidades diferentes de posicionamento
+        </p>
+        <section class="cards" aria-label="Galeria de cards">
+        <article class="card">
+            <img src="imagens/desenvolvimento web.avif.jpg" alt="Computador no desenvolvimento web">
+            <div class="corpo-cartao">            
+                <h2>Desenvolviemnto web</h2>
+                <p>criação de sites modernos e responsiveis</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="imagens/pc.avif.jpg" alt="design centrado no usuário">
+            <div class="corpo-cartao">
+                <h3>UI/UX Design</h3>
+                <p>Interfaces bonitas e faceis de usar </p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="imagens/progrmacao.jpeg" alt="desenvolvimento de soluções inteligentes por meio do código">
+            <div class="corpo-cartao">
+                <h2>Programação</h2>
+                <p>desenvolvimento de soluções inteligentes por meio do código</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="imagens/camera.jpg" alt="camera fotografica">
+            <div class="corpo-cartao">
+                <h2>Camera fotográfica</h2>
+                <p>Objeto para registrar momentos</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="imagens/marketing.jpg" alt="Sala de negócios">
+            <div class="corpo-carto">
+                <h2>Marketing Digital</h2>
+                <p>Desenvolvendo soluções viaveis pelo ambiente digital</p>
+            </div>
+        </article>
     </section>
-    
-                
-  </main>
-  <footer class="rodape">
-<p>FlexCards-Aula pratica de css Desenvolvido por Thallyson Raphael</p>    
+        </div>
+    </main>
+    <footer class="rodape">
+        <h3>FlexCards — Aula prática de CSS feito por: Thallyson Raphael</h3>
+     
+    </footer>
 </body>
 </html>
