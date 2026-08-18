@@ -1,130 +1,141 @@
-:root{
-    --header-bg:#231F63;
-    --page-bg:#EAEBF2;
-    --card-bg:#FFFFFF;
-    --text-dark:#1e2430;
-    --text-muted: #2a2d38;
-    --shadow:rgba(0, 0, 0, 0.08);   
+:root {
+  --header-bg: #2d2d69;
+  --page-bg: #dfe4ee;
+  --card-bg: #eef1f5;
+  --text-dark: #1e2430;
+  --text-muted: #2a2d38;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08);
 }
-*{
-    box-sizing:border-box;
-}html,body{
-    margin:0;
-    padding:0;
-    font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif sans-serif;
-    background:var(--page-bg);
-    color:var(--text-dark);    
+
+* {
+  box-sizing: border-box;
 }
-body{
-    min-height: height 100vh;
-    display: flex;
-    flex-direction: column;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-dark);
 }
-img{
-    display:block;
-    max-width: 100%;
-    width: 100%;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-/* header*/
-.titulo{
-    width:min(1280px,calc(100%-40px));
-    margin:0 auto;
-    background-color:var(--header-bg);
-    color: var(--card-bg);
-    text-align: center;
-    padding:18px 0 14px;
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
 }
-/*titulo do header */
-.cabecalho h2{
-    margin:0;
-    font-size:clamp(2.3rem,3vw,4rem);
-    font-weight:800;
-    letter-spacing:-0.05em;
+
+.titulo {
+  width: min(1280px, calc(100% - 40px));
+  margin: 0 auto;
 }
-/*Paragrafo do cabeçalho*/
-.cabecalho p{
-    margin:8px 0 0;
-    font: size 1.1rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
+
+/* Header */
+.cabecalho {
+  background: var(--header-bg);
+  color: var(--white);
+  text-align: center;
+  padding: 18px 0 14px;
 }
-/*seção do galeria*/
-.sesao-galeria{
-    margin: 30px;
-    flex: 1;
-    background-color: var(--page-bg) ;
-    font-size: clamp(2rem,2vw,2.8rem);
-    padding:28px 0 40px;
+
+.cabecalho h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 3vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
 }
-.sesao-galeria h2{
-    margin:0 0 12px;
-    font-size: clamp(2rem,2vw,2.8);
-    font-weight:800;
-    color:#2c2d3b;
-}
-/*Texto explicando o objetivo da atividade*/
-.descricao{
-  margin: 0 0 28px;
-  max-width: 900px;
+
+.cabecalho p {
+  margin: 8px 0 0;
   font-size: 1.1rem;
-  line-height: 1.5;
-  color: var(--text-muted);  
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
 }
-/*Flexbox principal*/
-.cards{
-    display: flex;
-    gap: 22px;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+
+/* Conteúdo principal */
+.sesao-galeria {
+  flex: 1;
+  background: var(--page-bg);
+  padding: 28px 0 40px;
+}
+
+.sesao-galeria h2 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 2vw, 2.8rem);
+  font-weight: 800;
+  color: #2c2d3b;
+}
+.galeria {
+    margin: 0.5em;
 
 }
-.card{
-    background-color: var(--page-bg);
-    display: block;
-    text-align: center;
+
+
+
+/* Flexbox principal */
+.cards {
+  display: flex;
+  gap: 22px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.card {
+  margin:1px;
+  padding: 3px;
     flex: 1 1 0;
   background: rgba(255, 255, 255, 0.35);
-  border-radius: 10px;
-  box-shadow:0px 4px 12px rgba(0, 0, 0, 0.5);
-  
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
 }
-/*configurações das imagem dos cards*/
-.card img{
-    
-    width:100;
-    height:220px;
-    border-radius: 5%;
-    border:5px solid white;
-    
+
+.card img {
+  height: 220px;
+  object-fit: cover;
 }
-/*configurações dos cards*/
-.card h3{
-    margin: 0 0 12px;
+
+.conteudo {
+  padding: 18px 18px 20px;
+
+}
+
+.card h3 {
+  margin: 0 0 12px;
   font-size: clamp(1.2rem, 1vw, 1.8rem);
   font-weight: 800;
   line-height: 1.2;
   color: #111827;
 }
-/* configurações dos paragrafos dos cards*/
+
 .card p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
   color: #2a2d34;
-  text-align: center;
 }
-/*footer do site*/
-.rodape{
-    text-align: center;
-    background-color:var(--header-bg);
-    color:var(--card-bg);
-    padding: 20px 0;
-font-size: 1.05rem;
+
+/* Footer */
+.rodape {
+  background: var(--header-bg);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.05rem;
   font-weight: 700;
 }
-.rodape p{
-    margin: 0;
+
+.rodape p {
+  margin: 0;
 }
+
 /* Responsividade */
 @media (max-width: 1100px) {
   .cards {
