@@ -1,0 +1,146 @@
+:root{
+    --header-bg:#231F63;
+    --page-bg:#EAEBF2;
+    --card-bg:#FFFFFF;
+    --text-dark:#1e2430;
+    --text-muted: #2a2d38;
+    --shadow:rgba(0, 0, 0, 0.08);   
+}
+*{
+    box-sizing:border-box;
+}html,body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif sans-serif;
+    background:var(--page-bg);
+    color:var(--text-dark);    
+}
+body{
+    min-height: height 100vh;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    display:block;
+    max-width: 100%;
+    width: 100%;
+}
+/* header*/
+.titulo{
+    width:min(1280px,calc(100%-40px));
+    margin:0 auto;
+    background-color:var(--header-bg);
+    color: var(--card-bg);
+    text-align: center;
+    padding:18px 0 14px;
+}
+/*titulo do header */
+.cabecalho h2{
+    margin:0;
+    font-size:clamp(2.3rem,3vw,4rem);
+    font-weight:800;
+    letter-spacing:-0.05em;
+}
+/*Paragrafo do cabeçalho*/
+.cabecalho p{
+    margin:8px 0 0;
+    font: size 1.1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+/*seção do galeria*/
+.sesao-galeria{
+    margin: 30px;
+    flex: 1;
+    background-color: var(--page-bg) ;
+    font-size: clamp(2rem,2vw,2.8rem);
+    padding:28px 0 40px;
+}
+.sesao-galeria h2{
+    margin:0 0 12px;
+    font-size: clamp(2rem,2vw,2.8);
+    font-weight:800;
+    color:#2c2d3b;
+}
+/*Texto explicando o objetivo da atividade*/
+.descricao{
+  margin: 0 0 28px;
+  max-width: 900px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-muted);  
+}
+/*Flexbox principal*/
+.cards{
+    display: flex;
+    gap: 22px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+}
+.card{
+    background-color: var(--page-bg);
+    display: block;
+    text-align: center;
+    flex: 1 1 0;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  box-shadow:0px 4px 12px rgba(0, 0, 0, 0.5);
+  
+}
+/*configurações das imagem dos cards*/
+.card img{
+    
+    width:100;
+    height:220px;
+    border-radius: 5%;
+    border:5px solid white;
+    
+}
+/*configurações dos cards*/
+.card h3{
+    margin: 0 0 12px;
+  font-size: clamp(1.2rem, 1vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111827;
+}
+/* configurações dos paragrafos dos cards*/
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2a2d34;
+  text-align: center;
+}
+/*footer do site*/
+.rodape{
+    text-align: center;
+    background-color:var(--header-bg);
+    color:var(--card-bg);
+    padding: 20px 0;
+font-size: 1.05rem;
+  font-weight: 700;
+}
+.rodape p{
+    margin: 0;
+}
+/* Responsividade */
+@media (max-width: 1100px) {
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    flex-basis: calc(50% - 22px);
+  }
+}
+
+@media (max-width: 680px) {
+  .card {
+    flex-basis: 100%;
+  }
+}
+
+

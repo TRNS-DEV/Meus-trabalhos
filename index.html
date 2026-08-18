@@ -1,141 +1,66 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<style>
-
-body{
-
-   font-family:Arial;
-   text-align:center;
-   background:#dbeafe;
-   padding:30px;
-
-}
-
-main{
-
-   background:white;
-   width:300px;
-   margin:auto;
-   padding:20px;
-   border-radius:10px;
-
-}
-
-input, button{
-
-   width:90%;
-   padding:10px;
-   margin:5px;
-
-}
-
-button{
-
-   background:#2563eb;
-   color:white;
-   border:none;
-
-}
-
-/* MELHORIA:
-Trocar cores e tamanhos */
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<main>
-
-<h1>Sistema de Notas</h1>
-<input type="text"
-id="nome"
-placeholder="Insira seu nome">
-
-<input type="number" 
-id="nota1"
-placeholder="Nota1">
-
-<input type="number"
-id="nota2"
-placeholder="Nota2">
-
-<input type="number"
-id="nota3"
-placeholder="Nota3">
-
-<input type="number"
-id="nota4"
-placeholder="Nota 4">
-
-
-<button onclick="calcular()">
-
-Calcular Média
-
-</button>
-
-<h2 id="resultado"></h2>
-
-</main>
-
-<script>
-
-function calcular(){
-    let nome=document.getElementById("nome").value;
-
-    let n1 =
-   Number(document.getElementById("nota1").value);
-
-   let n2 =
-   Number(document.getElementById("nota2").value);
-
-   let n3 =
-   Number(document.getElementById("nota3").value);
-
-   let n4=
-   Number(document.getElementById("nota4").value);
-
-   let media = (n1 + n2 + n3 + n4)/4;
-
-   if(media >=9){
-      document.getElementById("resultado").innerHTML =
-`Desempenho de classificação A aprovado, Parabéns!`+" "+ media +" "+nome;
-   }
-   else if(media>=7){
-    document.getElementById("resultado").innerHTML=
-    `Desempenho de classificação B Aprovado`;+" "+ media +" "+nome;
-   }
-   else if(media>=5 && media<=6.9){
-    document.getElementById("resultado").innerHTML=
-    `Desempenho de Classificação C Recuperação, Ainda Dá para melhorar`+" "+ media +" "+nome;
-   }
-   else{
-    document.getElementById("resultado").innerHTML=
-    `Reprovado, Estude mais você consegue!`+ media + nome;
-
-   } 
-
-
-   }
-
-   /* MELHORIAS:
-
-   1. Mostrar média
-   2. Mostrar recuperação
-   3. Alterar cor do resultado
-   4. Inserir nome do aluno
-   5. Mostrar conceito A/B/C
-
-   */
-
-
-
-</script>
-
+  <!--cabeçalho da pagina-->
+    <header class="cabecalho">
+    <div class="titulo">
+        <h2>Flex Cards</h2>
+    <p>Aprendendo flexbox na prática</p>
+    </div>
+  </header>  
+  <!--titulo da seção de galeria-->
+  <main class="sesao-galeria">
+    <div class="galeria">
+      <h2>Galeria de cards</h2>
+    </div>
+    <p class="descricao">Use o display flex para reorgarnizar os cards.Teste diferentes possibilidades</p>
+    <section class="cards" aria-label="galeria de cards">
+<article class="card">
+        <img src="/imagens/desenvolvimento web.avif.jpg"alt="computador desenvolvendo para a web">
+        <div class="conteudo">
+            <h3>Desenvolvimento Web</h3>
+            <p>Criação de sites modernos e responsivos</p>
+        </div>
+    </article>
+    <article class="card">
+        <img src="/imagens/pc.avif.jpg"alt="computador com interface de design">
+        <div class="conteudo">
+            <h3>UI/UX Design</h3>
+            <p>interfaces bonitas e facies de utilizar</p>
+        </div>
+    </article>
+    <article class="card">
+        <img src="/imagens/programacao.jpeg"alt="computador com codigo ao fundo">
+        <div class="conteudo">
+            <h3>Programação</h3>
+            <p>Desenvolvimento de software e resolução de problemas</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="/imagens/camera.jpg"alt="camera fotografica">
+                <div class="conteudo">
+                    <h3>Fotografia</h3>
+                    <p>registro de momentos atraves da imagem</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="/imagens/marketing.jpg"alt="Sala de negocios">
+                <div class="conteudo">
+                    <h3>Marketing Digital</h3>
+                    <p>estratégias de marketing para o mundo digital</p>
+                </div>
+                </article>
+    </section>
+    
+                
+  </main>
+  <footer class="rodape">
+<p>FlexCards-Aula pratica de css Desenvolvido por Thallyson Raphael</p>    
 </body>
 </html>
